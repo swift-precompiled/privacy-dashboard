@@ -20,26 +20,35 @@ let package = Package(
         .target(
             name: "PrivacyDashboardResources_Aggregation",
             dependencies: ["PrivacyDashboardResources"],
+            packageAccess: false,
             swiftSettings: [.define("SCIPIO_PRECOMPILED_BINARY_WRAPPER")]
         ),
         .binaryTarget(
             name: "PrivacyDashboardResources",
-            url: "https://github.com/swift-precompiled/privacy-dashboard/releases/download/9.10.2/PrivacyDashboardResources-7523f8a077bc7fc601bb8e077af0f5c6ec03b622ede3faaaf7a1c7ff92a73b8a.xcframework.zip",
-            checksum: "7523f8a077bc7fc601bb8e077af0f5c6ec03b622ede3faaaf7a1c7ff92a73b8a"
+            url: "https://github.com/swift-precompiled/privacy-dashboard/releases/download/9.10.2/PrivacyDashboardResources-db0d9a82ae8901e9cb7c46e20b5b76cacfb13f752a1dbb2e677c7b55080bb1a8.xcframework.zip",
+            checksum: "db0d9a82ae8901e9cb7c46e20b5b76cacfb13f752a1dbb2e677c7b55080bb1a8"
         ),
         .target(
             name: "PrivacyDashboard-resources_Aggregation",
             dependencies: ["PrivacyDashboard-resources"],
+            resources: [
+                .copy("app/html"),
+                .copy("app/img"),
+                .copy("app/public"),
+                .copy("app/index.html")
+            ],
+            packageAccess: false,
             swiftSettings: [.define("SCIPIO_PRECOMPILED_BINARY_WRAPPER")]
         ),
         .binaryTarget(
             name: "PrivacyDashboard-resources",
-            url: "https://github.com/swift-precompiled/privacy-dashboard/releases/download/9.10.2/PrivacyDashboard_resources-71b736be99feb0b7c7c0c70f755667be5dd8f4e8375d6e6d21ee154a266b4f96.xcframework.zip",
-            checksum: "71b736be99feb0b7c7c0c70f755667be5dd8f4e8375d6e6d21ee154a266b4f96"
+            url: "https://github.com/swift-precompiled/privacy-dashboard/releases/download/9.10.2/PrivacyDashboard_resources-8f11d17e9e2cc948030cc4d67196260686bcc25a5efc257b213544a579325db7.xcframework.zip",
+            checksum: "8f11d17e9e2cc948030cc4d67196260686bcc25a5efc257b213544a579325db7"
         ),
         .target(
             name: "PrivacyDashboardResources_PrecompiledProduct",
-            dependencies: ["PrivacyDashboardResources_Aggregation", "PrivacyDashboard-resources_Aggregation"]
+            dependencies: ["PrivacyDashboardResources_Aggregation", "PrivacyDashboard-resources_Aggregation"],
+            packageAccess: false
         )
     ]
 )
