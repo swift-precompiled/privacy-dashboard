@@ -9,7 +9,11 @@ let package = Package(
     products: [
         .library(
             name: "PrivacyDashboardResources",
-            targets: ["PrivacyDashboardResources_PrecompiledProduct"]
+            targets: [
+                "PrivacyDashboardResources",
+                "PrivacyDashboard-resources",
+                "PrivacyDashboardResources_PrecompiledProduct"
+            ]
         )
     ],
     targets: [
@@ -20,8 +24,8 @@ let package = Package(
         ),
         .binaryTarget(
             name: "PrivacyDashboardResources",
-            url: "https://github.com/swift-precompiled/privacy-dashboard/releases/download/9.10.2/PrivacyDashboardResources-9de87ea228a2e7a2edeb934826b9fa0721688863f2fcdd1d0b992fdbd943dd17.xcframework.zip",
-            checksum: "9de87ea228a2e7a2edeb934826b9fa0721688863f2fcdd1d0b992fdbd943dd17"
+            url: "https://github.com/swift-precompiled/privacy-dashboard/releases/download/9.10.2/PrivacyDashboardResources-7523f8a077bc7fc601bb8e077af0f5c6ec03b622ede3faaaf7a1c7ff92a73b8a.xcframework.zip",
+            checksum: "7523f8a077bc7fc601bb8e077af0f5c6ec03b622ede3faaaf7a1c7ff92a73b8a"
         ),
         .target(
             name: "PrivacyDashboard-resources_Aggregation",
@@ -30,8 +34,8 @@ let package = Package(
         ),
         .binaryTarget(
             name: "PrivacyDashboard-resources",
-            url: "https://github.com/swift-precompiled/privacy-dashboard/releases/download/9.10.2/PrivacyDashboard_resources-534268397f35a3dcbc03a79bd01bcc393a1c10e2fc85dbcf41ecaecf3b9ad585.xcframework.zip",
-            checksum: "534268397f35a3dcbc03a79bd01bcc393a1c10e2fc85dbcf41ecaecf3b9ad585"
+            url: "https://github.com/swift-precompiled/privacy-dashboard/releases/download/9.10.2/PrivacyDashboard_resources-71b736be99feb0b7c7c0c70f755667be5dd8f4e8375d6e6d21ee154a266b4f96.xcframework.zip",
+            checksum: "71b736be99feb0b7c7c0c70f755667be5dd8f4e8375d6e6d21ee154a266b4f96"
         ),
         .target(
             name: "PrivacyDashboardResources_PrecompiledProduct",
